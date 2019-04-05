@@ -23,10 +23,10 @@ class DropdownFilter extends Component {
       <Dropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} className="filter__option">
         <DropdownToggle caret>Name</DropdownToggle>
         <DropdownMenu>
-          <DropdownItem onClick={this.onSortNA}>Name (Asc)</DropdownItem>
-          <DropdownItem onClick={this.onSortND}>Name (Dsc)</DropdownItem>
-          <DropdownItem onClick={this.onSortPA}>Price (Asc)</DropdownItem>
-          <DropdownItem onClick={this.onSortND}>Price (Dsc)</DropdownItem>
+          <DropdownItem onClick={this.props.onSortNA}>Name (Asc)</DropdownItem>
+          <DropdownItem onClick={this.props.onSortND}>Name (Dsc)</DropdownItem>
+          <DropdownItem onClick={this.props.onSortPA}>Price (Asc)</DropdownItem>
+          <DropdownItem onClick={this.props.onSortPD}>Price (Dsc)</DropdownItem>
         </DropdownMenu>
       </Dropdown>
     );

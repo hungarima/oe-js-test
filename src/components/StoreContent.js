@@ -28,7 +28,7 @@ class StoreContent extends Component {
   render() {
     return (
       <div className="main__content">
-        <CardDeck>{ this.productContentRow() }</CardDeck>
+        <CardDeck className="main__deck">{ this.productContentRow() }</CardDeck>
       </div>
     );
   }

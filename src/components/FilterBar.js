@@ -8,7 +8,7 @@ class FilterBar extends Component {
         <Button className="filter__button">Filter</Button>
         <div className="filter__right">
           <span className="filter__text">Sort By</span>
-          <DropdownFilter />
+          <DropdownFilter onSortNA={this.props.onSortNA} onSortND={this.props.onSortND} onSortPA={this.props.onSortPA} onSortPD={this.props.onSortPD}/>
         </div>
       </div>
     );

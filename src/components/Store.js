@@ -5,13 +5,14 @@ import axios from "axios";
 import StoreContent from "./StoreContent";
 import FilterBar from "./FilterBar";
 
-class Store4 extends Component {
+class Store1 extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
       store: []
     };
+
     this.onSortNA = this.onSortNA.bind(this);
     this.onSortND = this.onSortND.bind(this);
     this.onSortPA = this.onSortPA.bind(this);
@@ -24,8 +25,8 @@ class Store4 extends Component {
       .get("/stores.json")
       .then(data => {
         this.setState({
-          store: data.data.stores[3],               //The only difference between Store components
-          products: data.data.stores[3].products    //
+          store: data.data.stores[0],
+          products: data.data.stores[0].products
         });
       })
       .catch(err => console.error(err));
@@ -46,7 +47,7 @@ class Store4 extends Component {
       } else if (varA < varB) {
         comparison = -1;
       }
-      return order === "desc" ? comparison * -1 : comparison;
+      return order == "desc" ? comparison * -1 : comparison;
     };
   }
 
@@ -96,4 +97,4 @@ class Store4 extends Component {
   }
 }
 
-export default Store4;
+export default Store1;

@@ -13,6 +13,7 @@ body {
   background-color: #f0f0f0;
 }
 .sidebar {
+  width: 20rem;
   height: 100%;
   position: fixed;
   background-color: #1f2f57;
@@ -48,7 +49,7 @@ body {
 }
 
 .main {
-  margin-left: 250px;
+  margin-left: 200px;
   font-size: 2rem;
   padding: 0px 40px;
   height: 100%;
@@ -102,6 +103,12 @@ body {
 .dropdown-menu {
   font-size: 1.5rem;
 }
+
+.card {
+  margin-bottom: 3rem !important;
+}
+
+
 .card__body {
   color: #1f2f57;
   font-weight: 400;
@@ -128,10 +135,28 @@ body {
   float: right;
 }
 
+@media screen and (max-width: 1200px) {
+  .main__deck {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+  }
+}
+
+
+@media screen and (max-width: 968px) {
+  .main__deck {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
 @media screen and (max-width: 768px) {
-  
+  .main__deck {
+    display: grid;
+    grid-template-columns: 100%;
+  }
 }
 
 @media screen and (max-width: 360px) {
-  
 }
